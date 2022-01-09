@@ -7,7 +7,7 @@
 void ReadInitialState(int InputArray[Nrows][Ncols])	//ReadInititalState Purpose: Reads in a text file and stores it into a 2D Array.
 {
     FILE *InputFile; 
-    InputFile = fopen("InitialState_3.txt", "r");	//Open's the text file named: InitialState_3.txt. "r" specifies read mode
+    InputFile = fopen("InitialState_2.txt", "r");	//Open's the text file named: InitialState_2.txt. "r" specifies read mode
     int n, m;	//Initializes integer variables: n & m
     
 	if (InputFile == NULL)
