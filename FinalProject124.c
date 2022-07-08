@@ -61,13 +61,13 @@ void ComputeNextGen(int ArrayCurrentGen[Nrows][Ncols], int ArrayNextGen[Nrows][N
 		{
 				int count = 0;
 				//Checks the neighbors of each respective cell and counts the number of alive cells surrounding it
-				count += ArrayCurrentGen[n - 1][m + 1];	//Checks diagonal top right neighbor
-				count += ArrayCurrentGen[n - 1][m - 1];	//Checks diagonal top left neighbor	
-				count += ArrayCurrentGen[n + 1][m - 1];	//Checks diagonal bottom left neighbor
-				count += ArrayCurrentGen[n + 1][m + 1];	//Checks diagonal bottom right neighbor
+				count += ArrayCurrentGen[n - 1][m + 1];	//Checks diagonal bottom right neighbor
+				count += ArrayCurrentGen[n - 1][m - 1];	//Checks diagonal bottom left neighbor	
+				count += ArrayCurrentGen[n + 1][m - 1];	//Checks diagonal top left neighbor
+				count += ArrayCurrentGen[n + 1][m + 1];	//Checks diagonal top right neighbor
 				count += ArrayCurrentGen[n][m - 1];		//Checks directly left neighbor
-				count += ArrayCurrentGen[n + 1][m];		//Checks directly bottom neighbor	
-				count += ArrayCurrentGen[n - 1][m];		//Checks directly top neighbor	
+				count += ArrayCurrentGen[n + 1][m];		//Checks directly top neighbor	
+				count += ArrayCurrentGen[n - 1][m];		//Checks directly bottom neighbor	
             	count += ArrayCurrentGen[n][m + 1];		//Checks directly right neighbor
 			
 			if  (((ArrayCurrentGen[n][m] == 1) && ((count == 2  )|| (count == 3)))|| (count == 3))		//If an alive cell is surrounded by 2 or 3 alive cells or if a dead cell is surrounded by 3 alive cells the following condition executes
